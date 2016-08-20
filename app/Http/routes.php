@@ -23,6 +23,7 @@ Route::get('/showusers', 'ShowUsersController@index');
 
 Route::get('edit/{id}', 'EditUsers@index');
 Route::post('/makeedit', 'EditUsers@makeEdit');
+Route::post('deleteuser/{id}', 'EditUsers@deleteuser');
  
 //Route::get('edit/{id}', function ($id) {
 //    return 'User '.$id;

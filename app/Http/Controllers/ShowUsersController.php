@@ -13,7 +13,8 @@ class ShowUsersController extends Controller
 
 public function index() {
 
-$users = DB::select('select * from users');
+//$users = DB::select('select * from users');
+$users = DB::table('users')->get();
 
 return view('form.showUsers', [
 	'users' => $users,

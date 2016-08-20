@@ -43,6 +43,13 @@ return view('sucess', ['msg' => 'Usuário editado com sucesso!']);
 
 }
 
+public function deleteuser(Request $request, $id) {
+ 
+DB::table('users')->where('id', $id)->delete();
+return view('sucess', ['msg' => 'Usuário excluido com sucesso!']);
+
+}
+
 
 
 }

@@ -1,13 +1,13 @@
-<html>
-<body>
-<h1>Listagem de produtos</h1>
-<table>
-<?php foreach ($users as $p): ?>
-<tr>
-<td><? = $p->name ?> </td>
-<td><? = $p->email ?> </td>
-<td><? = $p->id3 ?> </td>
- 
-</tr>
-<?php endforeach ?>
-</table>
+@extends('menu')
+@section('title', 'Mostrar Usuarios')
+@section('conteudo')
+@foreach ($users as $user )
+
+Nome: {{$user->name}} <br>
+Email: {{$user -> email}}<br>
+<a href="/edit/{{$user -> id}}">Editar</a> <br>
+ <br>
+@endforeach
+
+
+@stop

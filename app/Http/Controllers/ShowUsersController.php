@@ -15,7 +15,11 @@ public function index() {
 
 $users = DB::select('select * from users');
 
-return view('form.showUsers', ['users' => $users]);
+return view('form.showUsers', [
+	'users' => $users,
+	'tst' => 'essa porra n quer funcionar'
+
+	]);
 
  
 

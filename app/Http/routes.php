@@ -19,3 +19,11 @@ Route::get('/form', function () {
 });
 Route::post('/addUser', 'addUser@index');
 Route::get('/showusers', 'ShowUsersController@index');
+
+
+Route::get('edit/{id}', 'EditUsers@index');
+Route::post('/makeedit', 'EditUsers@makeEdit');
+ 
+//Route::get('edit/{id}', function ($id) {
+//    return 'User '.$id;
+//});

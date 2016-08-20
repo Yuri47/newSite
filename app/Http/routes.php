@@ -18,3 +18,4 @@ Route::get('/form', function () {
     return view('form.form');
 });
 Route::post('/addUser', 'addUser@index');
+Route::get('/showusers', 'ShowUsersController@index');

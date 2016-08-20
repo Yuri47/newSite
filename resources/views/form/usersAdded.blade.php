@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Usuarios Adcionados</div>
+                <div class="title">Usuarios Adcionados</div> 
+                <p>Sr. {{$name}}</p>
 
  
 

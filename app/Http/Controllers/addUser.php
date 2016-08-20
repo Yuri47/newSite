@@ -11,17 +11,18 @@ class addUser extends Controller
 {
     //
 public function index(Request $request) {
+
+
+$name = $request -> input('name');
+$email = $request -> input('email');
+
+
+
+
+//inserir no banco de dados
 	DB::table('users')->insert(
-    ['name'=>'Mayer Bitch','email' => 'mayer@example.com' ]
+    ['name'=>$name,'email' => $email]
 );
-
-	var_dump($request -> all());
-		//return view('form.usersAdded');
+ return view('form.usersAdded', ['name' => $name]);
 }
-
-
-
-
-
-
 }

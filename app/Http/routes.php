@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -28,3 +29,6 @@ Route::post('deleteuser/{id}', 'EditUsers@deleteuser');
 //Route::get('edit/{id}', function ($id) {
 //    return 'User '.$id;
 //});
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

@@ -5,16 +5,16 @@
 
  
 <form method="post" action="/makeedit">
-	<input type="hidden" name="id" value="{{$id}}">
+	<input type="hidden" name="id" value="{{$user->id}}">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
-    Nome: <input type="text" name="name" required value="{{$name}}"><br>
-    Email: <input type="text" name="email" required value="{{$email}}">
+    Nome: <input type="text" name="name" required value="{{$user->name}}"><br>
+    Email: <input type="text" name="email" required value="{{$user->email}}">
     <input type="submit" value="Editar">
 
 </form>
 <br>
-<form method="post" action="/deleteuser/{{$id}}">
-	<input type="hidden" name="id" value="{{$id}}">
+<form method="post" action="/deleteuser/{{$user->id}}">
+	<input type="hidden" name="id" value="{{$user->id}}">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
     <input type="submit" value="Excluir">
 

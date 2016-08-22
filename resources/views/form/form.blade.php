@@ -13,6 +13,8 @@
 
 </form>
 
+<img src="/image/novoArquivo.jpg" width="100px" height="auto">
+
 @stop
 
 

@@ -21,7 +21,7 @@ Route::post('/addUser', 'addUser@index');
 Route::get('/showusers', 'ShowUsersController@index');
 
 
-Route::get('edit/{id}', 'EditUsers@index');
+Route::post('edit/{id}', 'EditUsers@index');
 Route::post('/makeedit', 'EditUsers@makeEdit');
 Route::post('deleteuser/{id}', 'EditUsers@deleteuser');
  

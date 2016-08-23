@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('initial');
 });
 Route::get('/form', function () {
     return view('form.form');
@@ -32,3 +32,7 @@ Route::post('deleteuser/{id}', 'EditUsers@deleteuser');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/services', 'PagesController@service');
+Route::get('/createservices', 'CreateController@createservice');
+Route::post('/newservice', 'CreateController@newService');

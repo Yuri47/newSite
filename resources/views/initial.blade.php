@@ -1,25 +1,8 @@
 @extends('layoutpadrao')
  
 @section('conteudo')
-@foreach ($users as $user )
-
-Nome: {{$user->name}} <br>
-Email: {{$user -> email}}<br>
  
-
-<form method="post" action="/edit/{{$user -> id}}">
-	 <input type="hidden" name="_token" value="{{csrf_token()}}">
-<input type="submit" value="editar">
-</form>
-<img src="/image/{{$user->image}}" widht="auto" height="100px">
- <br>
-@endforeach
-
-<p class="showteste" id="showtestfe">teste</p>
-
-
-    <div id="featured">
-      <div class="container">
+    
         <header>
           <h2>Bem Vindo a Macromix</h2>
            
@@ -74,9 +57,7 @@ Email: {{$user -> email}}<br>
 
         </div>
         
-      </div>
-    </div>
-
+      
 
 
 

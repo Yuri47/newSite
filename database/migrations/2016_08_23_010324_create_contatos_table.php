@@ -3,25 +3,22 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateServicesTable extends Migration
+class CreateContatosTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-
- 
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('contatos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nameService');
-            $table->string('description');
-            $table->string('longDescription');
-            $table->string('imageService');
-            $table->string('url');
-            $table->string('publish');
+            $table->string('amount');
+            $table->string('ew');
+            $table->string('gg');
+            $table->string('fd');
+            $table->string('bbb');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('services');
+        Schema::drop('contatos');
     }
 }

@@ -52,6 +52,7 @@ $image;
 //$user = new User($param);
 //$user -> save();
 //agora a porra ficou séria! O código abaixo faz o mesmo que os cógidos acima. Fudeo.
+ 		  
 User::create($user);
 
 

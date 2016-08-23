@@ -34,5 +34,6 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/services', 'PagesController@service');
+Route::get('/services/{url}', 'PagesController@serviceDetails');
 Route::get('/createservices', 'CreateController@createservice');
 Route::post('/newservice', 'CreateController@newService');

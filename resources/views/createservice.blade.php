@@ -1,8 +1,14 @@
-@extends('layoutpadrao')
+@extends('layouts.app')
  
-@section('conteudo')
- 
+@section('content')
+
 <h1>criar serviços</h1>
+  {!!(string)Session::get('temp')!!}
+ 
+@foreach ($errors->all() as $error)
+    {{$error}}<br>  <!-- imprimir os erros de validação caso haja algum, serão enviados pelo Validator -->
+@endforeach
+
 <div align="center">
 
 <form action="/newservice" method="post" enctype="multipart/form-data">
@@ -21,4 +27,9 @@
 <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
 <script>tinymce.init({selector:'textarea'});</script>
 
+ 
+
+ 
+
+ 
 @stop

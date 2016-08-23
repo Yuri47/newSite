@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\service;
+ 
 
 class PagesController extends Controller
 {
@@ -19,6 +20,15 @@ $services = service::all();
 
 	}
 
+public function serviceDetails($url) {
+
+//$service = service::find(10);
+$service = service::where('url', $url)->get(); //pega todos os dados onde a url for igual ao parametro.
+ 
+
+	 return view('serviceDetails', ['service' => $service]);
+
+}
 
 
 

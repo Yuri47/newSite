@@ -1,15 +1,27 @@
 @extends('layoutpadrao')
  
 @section('conteudo')
- 
-<h1>serviços</h1>
-@foreach ($services as $service )
+  <div class="row centro">
 
-Nome: {{$service->nameService}} <br>
-Descrição: {{$service -> description}}<br>
-Descrição Longa: {!!$service -> longDescription!!}<br>
-<img src="/image/{{$service -> imageService}}"  widht="auto" height="100px">
+
+@foreach ($services as $service )
+ 
+<section class="4u sessao">
+            <span class="pennant"> 
+              <a href="/services/{{$service->url}} ">
+              <img  src="/image/images/{{$service -> imageService}}" style="width: auto; height: 200px;" alt="Imagem Produto" class="img-rounded"data-src="holder.js/140x140"></span>
+            </a>
+
+            <h3>{{$service->nameService}}</h3>
+            <p> {{$service -> description}}</p>
+             <div class="botaoDetalhe">
+            <a href="/services/{{$service->url}}" class="button button-style1">Ver Detalhes »</a>
+           </div>
+          </section>
+ 
 
 @endforeach
-
+ 
+</div> <!-- end row centro-->
 @stop
+

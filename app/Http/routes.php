@@ -31,9 +31,14 @@ Route::post('deleteuser/{id}', 'EditUsers@deleteuser');
 //});
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/admin', 'HomeController@index');
 
 Route::get('/services', 'PagesController@service');
 Route::get('/services/{url}', 'PagesController@serviceDetails');
 Route::get('/createservices', 'CreateController@createservice');
+Route::get('/viewservices', 'PagesController@viewServices');
 Route::post('/newservice', 'CreateController@newService');
+Route::post('/disableservice', 'ServiceController@disable');
+Route::post('/enableservice', 'ServiceController@enable');
+Route::post('/deleteservice', 'ServiceController@delete');
+

@@ -21,10 +21,10 @@ class CreateController extends Controller
 if (Auth::guest()) {
 return view('auth.login');
 } else {
-return view('createservice');
+return view('auth.createservice');
 }
  
-    	return view('createservice');
+    	return view('auth.createservice');
 
     } //fim da função createService
 

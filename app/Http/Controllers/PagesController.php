@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\service;
- 
+use Auth;
 
 class PagesController extends Controller
 {
@@ -14,22 +14,38 @@ class PagesController extends Controller
 
 	public function service() {
   
-$services = service::all();
+$services = service::where('publish', 1)->get();
  
-		return view('service', ['services' => $services]);
+		return view('pages.service', ['services' => $services]);
 
 	}
-
+//pagecontroller
 public function serviceDetails($url) {
 
 //$service = service::find(10);
 $service = service::where('url', $url)->get(); //pega todos os dados onde a url for igual ao parametro.
  
 
-	 return view('serviceDetails', ['service' => $service]);
+	 return view('pages.serviceDetails', ['service' => $service]);
+
+}
+
+public function viewServices() {
+
+
+if (Auth::guest()) {
+return view('auth.login');
+} else {
+
+ $services = service::all();
+ 
+		return view('auth.viewservices', ['services' => $services]);
+
+}
+	}
 
 }
 
 
 
-}
+

@@ -41,4 +41,7 @@ Route::post('/newservice', 'CreateController@newService');
 Route::post('/disableservice', 'ServiceController@disable');
 Route::post('/enableservice', 'ServiceController@enable');
 Route::post('/deleteservice', 'ServiceController@delete');
+Route::post('/pageedit', 'ServiceController@pageEdit');
+Route::post('/editservice', 'ServiceController@edit');
+
 

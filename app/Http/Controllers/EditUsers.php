@@ -17,7 +17,7 @@ class EditUsers extends Controller
 public function index(Request $request, $id) {
 
 	//$user = DB::table('users')->where('id', $id)->first();
-	$user = User::find($id); //faz uma busca na tabela user pelo ID usando o Model (App\User)
+	$user = User::find($id); //faz uma busca na tabela user pelo ID usando o Model (App\User) 
  
 	//return view('form.userEdit', [
 	//	'name' => $user->name,

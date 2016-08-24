@@ -6,7 +6,8 @@
  @foreach ($services as $serv)
  
 
-		<form action=" " method="post">
+		<form action="/pageedit" method="post">
+        <input type="hidden" name="id" value="{{$serv->id}}">
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
         Nome: {{$serv->nameService }}
         <input type="submit" value="editar" class="btn btn-success">

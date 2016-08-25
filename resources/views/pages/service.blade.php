@@ -1,5 +1,5 @@
 @extends('layouts.layoutpadrao')
- 
+@section('title', 'Serviços')
 @section('conteudo')
   <div class="row centro">
 

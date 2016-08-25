@@ -3,13 +3,28 @@
 @section('content')
 
  
-
+ 
 
 <h1>editar serviços</h1>
   {!!(string)Session::get('temp')!!}
+  @if (isset($temp))
+
+
+<div class="alert alert-success">
+<strong>Sucesso!</strong>
+O produto <strong> {{$temp}} </strong>  foi modificado.
+</div>
+
+
+ 
+  @endif
  
 @foreach ($errors->all() as $error)
-    {{$error}}<br>  <!-- imprimir os erros de validação caso haja algum, serão enviados pelo Validator -->
+
+<div class="alert alert-danger">
+  {{$error}}
+</div>
+     <!-- imprimir os erros de validação caso haja algum, serão enviados pelo Validator -->
 @endforeach
 
 <div align="center">

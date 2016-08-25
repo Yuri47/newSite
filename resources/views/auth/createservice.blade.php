@@ -4,6 +4,7 @@
 
 <h1>criar serviços</h1>
   {!!(string)Session::get('temp')!!}
+  
  
 @foreach ($errors->all() as $error)
     {{$error}}<br>  <!-- imprimir os erros de validação caso haja algum, serão enviados pelo Validator -->

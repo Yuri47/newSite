@@ -8,10 +8,10 @@
 
 
  @foreach ($service as $serv)
- 
 
 
- 
+
+ @section('title',    'fd' )
 
  <div class="featurette">
 

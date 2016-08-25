@@ -4,7 +4,7 @@
  
 <html lang="pt-BR">
 	<head>
-
+    <title>@yield('title') - Macromix Informática</title>
 		<meta name="theme-color" content="‪#‎0000ff">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		
@@ -53,28 +53,12 @@
 					<ul> 
 						<li class="active"><a href="/">Inicio</a></li>
                 		<li><a href="/services">Serviços</a></li>
-                		<li><a href="/products">Produtos</a></li>
+                		
                 		<li><a href="/contact">Contato</a></li> 
-                		<li><a href="/contact">Segurança Eletrônica</a></li>
+                	 
 					</ul>
 
-					  <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
+					 
                 
 				</nav>
 			</div>
@@ -117,7 +101,7 @@
       <div class="container copyright">
         <section>
           <header>
-            <h2>Site name</h2>
+            <h2>Macromix</h2>
             <span class="byline">
               <address>
    
@@ -144,7 +128,7 @@
   <!-- Copyright -->
     <div id="copyright">
       <div class="container">
-        Desenvolvido por: <a href="https://www.facebook.com/yuri.alexs" target="_blank">Author</a> 
+        Desenvolvido por: <a href="https://www.facebook.com/yuri.alexs" target="_blank">Yuri Alexs</a> 
         <!--
         Design: <a href="http://templated.co">TEMPLATED</a> 
         Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)

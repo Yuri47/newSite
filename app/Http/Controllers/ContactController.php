@@ -7,18 +7,20 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use Mail;
+use DB;
 
 class ContactController extends Controller
 {
     //
 
-public function pageContact() {
+public function pageContact($email) {
+$user = User::find(1);
 
-	   $user = User::findOrFail(1);
-   Mail::send('emails.reminder', ['user' => $user], function ($m) use ($user) {
-            $m->from('hello@app.com', 'Your Application');
+	   
+   Mail::send('mail.mail', ['user' => $user], function ($message) use ($email) {
+            
 
-            $m->to($user->email, $user->name)->subject('Your Reminder!');
+           $message->to($email)->subject('Your Reminder!');
         });
 
 	return "contato";

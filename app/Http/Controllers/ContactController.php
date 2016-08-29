@@ -13,9 +13,9 @@ class ContactController extends Controller
 {
     //
 
-public function pageContact($email) {
+public function pageContact() {
 $user = User::find(1);
-
+$email = 'testsontst0@gmail.com';
 	   
    Mail::send('mail.mail', ['user' => $user], function ($message) use ($email) {
             

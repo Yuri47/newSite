@@ -1,7 +1,7 @@
 @extends('layouts.layoutpadrao')
  
 @section('conteudo')
- 
+ <title>Macromix Informática</title>
     
         <header>
           <h2>Bem Vindo a Macromix</h2>

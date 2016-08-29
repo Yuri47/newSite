@@ -14,6 +14,13 @@ class ContactController extends Controller
     //
 
 public function pageContact() {
+
+	return view('pages.contact');
+
+}
+
+public function sendMail() {
+
 $user = User::find(1);
 $email = 'testsontst0@gmail.com';
 	   

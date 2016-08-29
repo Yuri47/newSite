@@ -4,7 +4,7 @@
  
 <html lang="pt-BR">
 	<head>
-    <title>@yield('title') - Macromix Informática</title>
+    
 		<meta name="theme-color" content="‪#‎0000ff">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		

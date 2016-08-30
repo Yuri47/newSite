@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\User;
 use Mail;
 use DB;
+use Redirect;
 
 class ContactController extends Controller
 {
@@ -21,18 +22,15 @@ public function pageContact() {
 
 public function sendMail() {
 
-$user = User::find(1);
-$email = 'testsontst0@gmail.com';
-	   
-   Mail::send('mail.mail', ['user' => $user], function ($message) use ($email) {
-            
-
-           $message->to($email)->subject('Your Reminder!');
-        });
-
-	return "contato";
+ $temp = '<div class="alert alert-success">
+<strong>Sucesso!</strong>
+Mensagem enviada!
+</div>';
 
 
+	return 'ok';
+
+ 
 }
 
 

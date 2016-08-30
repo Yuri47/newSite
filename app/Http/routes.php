@@ -45,4 +45,5 @@ Route::post('/pageedit', 'ServiceController@pageEdit');
 Route::post('/editservice', 'ServiceController@edit');
 
 Route::get('/contact', 'ContactController@pageContact');
+Route::post('/sendmail', 'ContactController@sendMail');
 

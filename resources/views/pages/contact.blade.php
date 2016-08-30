@@ -6,8 +6,7 @@
 
 
 
-
-
+ 
 
   <!-- Featured -->
  
@@ -69,7 +68,8 @@
 <div class="pgContato largura container">  
     <div class="contato">  
        <div class="formContato">  
-          <form action="process.php" class="formContato" id="contact-form" method="post" tabindex="1" role="form" > 
+          <form action="/sendmail" class="formContato" id="contact-form" method="post" tabindex="1" role="form" > 
+              <input type="hidden" name="_token" value="{{csrf_token()}}">
               <div id="name-field">
                 <div>
                     <input type="text" class="nome" id="form-name" name="form-name" placeholder="Nome" required>
@@ -113,13 +113,13 @@
 </div>
 
 
+{!!(string)Session::get('temp')!!}
 
 
 
 
-
- <script src="bootstrap/js/contact-form.js"></script>
-
+ 
+<script src="{{ asset('/js/contact-form.js') }}"></script>
 
 <!--
  <script  src="/bootstrap/js/jquery_form.js"></script>
@@ -132,58 +132,10 @@ jQuery(function($){
    
 });
 </script>
-
-
-          
-
+ 
         </div> <!-- Row -->
       </div> <!-- Container -->
     </div> <!-- Featured -->
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
+    
 </div> <!-- end row centro-->
 @stop

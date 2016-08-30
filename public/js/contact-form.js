@@ -32,7 +32,7 @@ Ajax Contact Form
         // process the form
         $.ajax({
             type : 'POST',
-            url  : 'process.php',
+            url  : '/sendmail',
             data : formData,
             dataType : 'json',
             encode : true

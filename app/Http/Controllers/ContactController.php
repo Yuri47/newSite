@@ -28,7 +28,7 @@ Mensagem enviada!
 </div>';
 
 
-	return 'ok';
+	return Redirect::to('/contact#email')->with('temp', $temp);
 
  
 }

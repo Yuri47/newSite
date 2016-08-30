@@ -1,9 +1,9 @@
 @extends('layouts.layoutpadrao')
- <title>Contato - Macromix Informática</title>
+
 @section('conteudo')
   <div class="row centro">
 
-
+ <title>Contato - Macromix Informática</title>
 
 
  
@@ -117,11 +117,11 @@
 
 
 
-
  
+ <!--
 <script src="{{ asset('/js/contact-form.js') }}"></script>
 
-<!--
+
  <script  src="/bootstrap/js/jquery_form.js"></script>
  -->
     <script  src="/bootstrap/js/jquery.maskedinput.js"></script>

@@ -139,4 +139,17 @@ return view('auth.pageedit', ['services' => $services])->with('temp', $temp);
     }
 
 
+    public function retornarJson($nameService) {
+
+
+        $services = service::where('nameService','LIKE', '%' . $nameService . '%')->get();
+ 
+        //return view('pages.json')->json($services);
+        return response()->json($services);
+
+
+
+    }
+
+
 }

@@ -47,3 +47,4 @@ Route::post('/editservice', 'ServiceController@edit');
 Route::get('/contact', 'ContactController@pageContact');
 Route::post('/sendmail', 'ContactController@sendMail');
 
+Route::get('/json/{nameService}', 'ServiceController@retornarJson');

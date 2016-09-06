@@ -139,16 +139,20 @@ return view('auth.pageedit', ['services' => $services])->with('temp', $temp);
     }
 
 
-    public function retornarJson($nameService) {
+    public function retornarJson(Request $request) {
 
-
-        $services = service::where('nameService','LIKE', '%' . $nameService . '%')->get();
+        $nameService = $request->input('query');
+        $services = service::select('nameService as name', 'imageService as image')->where('nameService','LIKE', '%' . $nameService . '%')->get();
  
         //return view('pages.json')->json($services);
         return response()->json($services);
 
 
 
+    }
+
+    public function search() {
+        return view('pages.json');
     }
 
 

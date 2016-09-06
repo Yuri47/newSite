@@ -49,4 +49,7 @@ Route::post('/sendmail', 'ContactController@sendMail');
 
 //Route::get('/json/{nameService}', 'ServiceController@retornarJson');
 Route::get('/search', 'ServiceController@search');
+Route::get('/pageajax', 'ServiceController@pageAjax');
 Route::get('json', array('as'=>'json', 'uses'=>'ServiceController@retornarJson'));
+Route::get('ajax', array('as'=>'ajax', 'uses'=>'ServiceController@retornarAjax'));
+Route::get('listaser', 'ServiceController@listaser');

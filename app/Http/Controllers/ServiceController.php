@@ -9,7 +9,7 @@ use App\service;
 use Redirect;
 use Auth;
 use Validator;
-
+use DB;
 class ServiceController extends Controller
 {
     //
@@ -155,5 +155,23 @@ return view('auth.pageedit', ['services' => $services])->with('temp', $temp);
         return view('pages.json');
     }
 
+    public function pageAjax() {
+        return view('pages.ajax');
+    }
+
+    public function retornarAjax(Request $request) {
+        $name = $request->input('name');
+
+        $msg = "funciona ajax".$name;
+        $msg = ['name' => $name, 'location' => 'local'];
+        return $msg;
+
+    }
+  public function listaser() {
+       $services = DB::table('services')
+            ->get();
+      return view('pages.listaser', ['services' => $services]);
+
+    }
 
 }

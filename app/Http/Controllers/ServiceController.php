@@ -168,9 +168,8 @@ return view('auth.pageedit', ['services' => $services])->with('temp', $temp);
 
     }
   public function listaser() {
-       $services = DB::table('services')
-            ->get();
-      return view('pages.listaser', ['services' => $services]);
+       $services = service::all();
+      return view('pages.listaser' )->with(compact('services'));
 
     }
 
